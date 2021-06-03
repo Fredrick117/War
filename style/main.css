@@ -1,8 +1,8 @@
 html, body {
     margin: 0;
     padding: 0;
-    background: #e1e9f5;
-    color: #5b6c87;
+    background: #f2cccc;
+    color: #a55555;
     font-size: 18px;
 }
 
@@ -17,17 +17,40 @@ body {
 }
 
 h1.title {
-    font-size: 80px;
+    font-family: Georgia, serif;
+    font-size: 60px;
     font-weight: bold;
     margin: 10px;
     display: block;
     float: left;
+
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
 }
 
 p {
     margin-top: 0;
     margin-bottom: 10px;
     line-height: 1.65;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+hr {
+    height: 1px;
+    border: none;
+    background-color: #a55555;
 }
 
 .container {
@@ -36,26 +59,27 @@ p {
 }
 
 .game-container {
-    margin-top: 40px;
-    border-radius: 4px;
-    background: #5b6c87;
-    width: 140%;
-}
-
-.opp-play-area, .player-play-area {
-    /* margin: 7px 0; */
-    width: 92px;
-    position: relative;
-    height: 155px;
-    border-radius: 10px;
-    border: 2px dashed #b3b1b1;
-    margin: 0 auto;
+    margin-top: 150px;
 }
 
 .opp-card-stack, .player-card-stack {
-    width: 92px;
-    height: 155px;
-    border-radius: 10px;
-    border: 2px dashed #b3b1b1;
-    margin: 0 auto;
+    color: #a55555;
+    text-align: center;
+    font-size: 25px;
+}
+
+.opp-card-stack p, .player-card-stack p {
+    display: inline-block;
+}
+
+.opp-card-stack::before, .player-card-stack::before {
+    content: "[ ";
+}
+.opp-card-stack::after, .player-card-stack::after {
+    content: " ]";
+}
+
+.opp p, .player p, .opp strong, .player strong {
+    display: inline-block;
+    vertical-align: center;
 }
