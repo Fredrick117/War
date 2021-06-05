@@ -47,6 +47,10 @@ p {
     text-transform: none;
 }
 
+.secret {
+    font-size: 7px;
+}
+
 hr {
     height: 1px;
     border: none;
@@ -59,7 +63,7 @@ hr {
 }
 
 .game-container {
-    margin-top: 150px;
+    margin-top: 50px;
 }
 
 .opp-card-stack, .player-card-stack {
@@ -82,4 +86,15 @@ hr {
 .opp p, .player p, .opp strong, .player strong {
     display: inline-block;
     vertical-align: center;
+}
+
+.action-button {
+    border: none;
+    border-radius: 2px;
+    background-color: #a55555;
+    padding: 16px 32px;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    color: #f2cccc;
+    margin: 20px auto;
 }
