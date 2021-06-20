@@ -15,23 +15,17 @@
                 <p class="secret">...and one that took me way too long to make...</p>
             </div>
 
-            <button class="action-button" onclick="start_game()" id="start">Start</button>
+            <button class="action-button" onclick="start_new_game()" id="start">Start new game</button>
 
             <div class="game-container" id="game">
-                <div class="opp">
-                    <p class="opp-card-stack" id="opp-cards"></p>
-                    <strong>Score: </strong>
-                    <p class="opp-score" id="opp-score">0</p>
-                </div>
-
+                <p class="opp-card-stack" id="opp-cards"></p>
+                <strong>Won cards: </strong>
+                <p class="opp-score" id="opp-score">0</p>
                 <hr>
-
-                <div class="player">
-                    <p class="player-card-stack" id="player-cards"></p>
-                    <strong>Score: </strong>
-                    <p class="player-score" id="player-score">0</p>
-                </div>
-                <button class="action-button" onclick="player_draw_card()">Draw a card</button>
+                <p class="player-card-stack" id="player-cards"></p>
+                <strong>Won cards: </strong>
+                <p class="player-score" id="player-score">0</p>
+                <button class="action-button" onclick="draw_card()">Draw a card</button>
             </div>
         </div>
         
