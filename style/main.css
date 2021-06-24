@@ -70,6 +70,19 @@ hr {
     padding: 15%;
 }
 
+.winner {
+    display: none;
+    margin-top: 50px;
+    background-color: #d1837b;
+    border-radius: 5px;
+    padding: 20%;
+}
+.winner p {
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+
 .game-container p {
     color: white;
 }

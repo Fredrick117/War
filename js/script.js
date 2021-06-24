@@ -10,13 +10,13 @@ var war_cards = [];
 
 /* When the player starts the game:
     - The game window is unhidden
-    - The start button is hidden (TODO: change)
+    - Cleanup
 */
 function start_new_game() {
     document.getElementById("game").style.display = "block";
-    document.getElementById("start").style.display = "none";
+    // document.getElementById("start").style.display = "none";
 
-    //cleanup();
+    cleanup();
 
     for (let i = 0; i < 2; i++) {
         for (let j = 0; j < 13; j++) {
@@ -41,6 +41,13 @@ function cleanup() {
     p2_card_count = 0;
 
     at_war = false;
+
+    document.getElementById("player-cards").innerHTML = 0;
+    document.getElementById("opp-cards").innerHTML = 0;
+    document.getElementById("player-score").innerHTML = 0;
+    document.getElementById("opp-score").innerHTML = 0;
+
+    document.getElementById("winner").style.display = "none";
 }
 
 function draw_card() {
@@ -58,6 +65,7 @@ function draw_card() {
             } else {
                 p1_card_count += war_cards.length;
                 war_cards = [];
+                at_war = false;
             }
         } else if (p2_draw > p1_draw) {
             if (!at_war) {
@@ -65,6 +73,7 @@ function draw_card() {
             } else {
                 p2_card_count += war_cards.length;
                 war_cards = [];
+                at_war = false;
             }
         } else {
             at_war = true;
@@ -80,12 +89,15 @@ function draw_card() {
 }
 
 function declare_winner() {
+    document.getElementById("game").style.display = "none";
+    document.getElementById("winner").style.display = "block";
+
     if (p1_card_count > p2_card_count) {
-        alert('player wins!');
+        document.getElementById("winner-text").innerHTML = "Player wins!";
     } else if (p2_card_count > p1_card_count) {
-        alert('AI wins!');
+        document.getElementById("winner-text").innerHTML = "Opponent wins!";
     } else {
-        alert(`it's a tie!`);
+        document.getElementById("winner-text").innerHTML = "It's a tie!";
     }
 }
 
