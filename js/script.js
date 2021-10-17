@@ -1,4 +1,3 @@
-// Global variable(s) (TODO: is this bad practice?)
 var p1_cards = [];
 var p2_cards = [];
 
